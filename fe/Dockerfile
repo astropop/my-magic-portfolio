@@ -42,8 +42,8 @@ ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN addgroup --system --gid 1002 nodejs-portfolio
-RUN adduser --system --uid 1002 nextjs-portfolio
+RUN addgroup --system --gid 1003 nodejs-portfolio
+RUN adduser --system --uid 1003 nextjs-portfolio
 
 COPY --from=builder /app/public ./public
 
@@ -58,9 +58,9 @@ COPY --from=builder --chown=nextjs-portfolio:nodejs-portfolio /app/.next/static 
 
 USER nextjs-portfolio
 
-EXPOSE 3001
+EXPOSE 3002
 
-ENV PORT=3001
+ENV PORT=3002
 
 # server.js is created by next build from the standalone output
 # https://nextjs.org/docs/pages/api-reference/next-config-js/output
