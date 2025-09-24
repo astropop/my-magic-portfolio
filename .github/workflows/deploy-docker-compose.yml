@@ -20,12 +20,18 @@ jobs:
       - name: SSH and deploy
         uses: appleboy/ssh-action@v1.2.2
         with:
-          host: ${{ secrets.ONLINE_HOST }} # Địa chỉ của server
-          username: ${{ secrets.ONLINE_USERNAME }} # Username để login vào server
-          key: ${{ secrets.ONLINE_SSH_PRIVATE_KEY }} # Private key để login vào server
+          host: ${{ secrets.ONLINE_HOST }} # ip of server
+          username: ${{ secrets.ONLINE_USERNAME }} # Username to login to server
+          key: ${{ secrets.ONLINE_SSH_PRIVATE_KEY }} # Private key to login to server
 
           script: |
             set -e
+
+            docker container stop my-magic-portfolio || true
+
+            docker container remove my-magic-portfolio || true
+
+            docker image remove magic-portfolio/my-magic-portfolio:latest || true
 
             cd ${{ secrets.ONLINE_PATH_PROJECT }} 
 

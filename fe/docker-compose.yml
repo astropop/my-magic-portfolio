@@ -2,7 +2,8 @@ services:
   my-magic-portfolio:
     build:
       dockerfile: Dockerfile
-    image: magic-portfolio/my-magic-portfolio:latest
+    image: magic-portfolio/my-magic-portfolio:latest # keep this setting for automatically refreshing docker
+    container_name: my-magic-portfolio # keep this setting for automatically refreshing docker
     environment:
       - NODE_ENV=production
       - VIRTUAL_HOST=tai.vnpsc.com,www.tai.vnpsc.com
