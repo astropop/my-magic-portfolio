@@ -13,7 +13,7 @@ import { Line, Logo, Row, Text } from "@once-ui-system/core";
 const person: Person = {
   firstName: "Tai Tuan",
   lastName: "Le",
-  name: `Tai Le`,
+  name: `Tai Tuan Le`,
   role: "Software Engineer | Developer Programmer | Web Developer | Java Developer",
   avatar: "/images/avatar.png",
   email: "letuantai241@gmail.com",
@@ -97,7 +97,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -105,10 +105,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for
-        transforming complex challenges into simple, elegant design solutions.
-        Her work spans digital interfaces, interactive experiences, and the
-        convergence of design and technology.
+        Tai is a software engineer with a passion for transforming complex
+        challenges into simple, elegant design solutions. With 9+ years of
+        software engineering experience, specialising in Java, web applications,
+        and full-stack development, I have an interest in turning code into
+        colorful life.
       </>
     ),
   },
@@ -117,17 +118,32 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "FPT Software, Vietnam",
+        timeframe: "November 2017 - January 2025",
+        role: "Front-end Team Leader | Web Developer | Software Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
+            Developed 5 screens for each system, including one screen rated as
+            the project’s most challenging.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
+            Mentored two 5-member teams, with 5 members becoming future leaders
+            and others key members of other teams.
+          </>,
+          <>
+            Built a process with over 10,000 lines of code to import large
+            datasets into a database using Seasar2 Framework based on Java
+            Struts 2.
+          </>,
+          <>
+            Delivered successfully a custom SSO login system for client
+            registration and login for Japanese customer systems.
+          </>,
+          <>Got a Valuable Person Award in 2023.</>,
+          <>Promoted to sub-leader in 2021, leader in 2022.</>,
+          <>
+            Got a Rookie award in 2018, an award for outstanding individuals
+            under 25 years old.
           </>,
         ],
         images: [
@@ -141,17 +157,44 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "DTT Technology Group, Vietnam",
+        timeframe: "June 2015 - November 2017",
+        role: "Web Developer | Mobile Developer | Supporter",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Participated in building, implementing and training end-users for
+            the project funded by the World Bank to help people developing the
+            rural water supply and sanitation
           </>,
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            Designed and coded systems for city, province, district information
+            portals in Vietnam using Liferay Portlets, MySQL.
+          </>,
+          <>
+            Developed and maintained online public services for the Vietnam
+            Register, Vietnam Maritime Administration using Liferay, Jasper
+            Reports.
+          </>,
+          <>
+            Helped to build and maintain the National Feedback and
+            Recommendation System for the Ministry of Justice(Vietnam).
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company:
+          "Hiep Thanh Telecommunication Service Join Stock Company, Vietnam",
+        timeframe: "October 2014 - May 2015",
+        role: "Web Developer | Mobile Developer | Supporter",
+        achievements: [
+          <>
+            Developed and enhanced old systems belong to companies using some
+            technologies using PHP, JQuery, HTML, CSS.
+          </>,
+          <>
+            Made an Android Application using Java Android about finding phone
+            numbers by preference, calculating feng shui points.
           </>,
         ],
         images: [],
@@ -163,12 +206,16 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Flinders University",
+        description: <>Master of Information Technology</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Military Technical Academy, Vietnam",
+        description: <>Bachelor of Information Technology</>,
+      },
+      {
+        name: "Hanoi APTECH, Vietnam",
+        description: <>APTECH CERTIFIED COMPUTER PROFESSIONAL (ACCP)</>,
       },
     ],
   },
@@ -177,14 +224,12 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Java",
+        description: <>Able to develop in Java proficiently.</>,
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Java",
+            icon: "java",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -205,9 +250,7 @@ const about: About = {
       },
       {
         title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        description: <>Building next gen apps with Next.js.</>,
         tags: [
           {
             name: "JavaScript",
@@ -216,10 +259,6 @@ const about: About = {
           {
             name: "Next.js",
             icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
           },
         ],
         // optional: leave the array empty if you don't want to display images
