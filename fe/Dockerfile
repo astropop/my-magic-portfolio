@@ -42,8 +42,8 @@ ENV NODE_ENV=production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 # ENV NEXT_TELEMETRY_DISABLED=1
 
-RUN addgroup --system --gid 1003 nodejs-portfolio
-RUN adduser --system --uid 1003 nextjs-portfolio
+RUN addgroup --system --gid 1002 nodejs-portfolio
+RUN adduser --system --uid 1002 nextjs-portfolio
 
 COPY --from=builder /app/public ./public
 
