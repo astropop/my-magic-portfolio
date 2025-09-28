@@ -119,7 +119,7 @@ const about: About = {
     experiences: [
       {
         company: "FPT Software, Vietnam",
-        timeframe: "November 2017 - January 2025",
+        timeframe: "2017 - 2025",
         role: "Front-end Team Leader | Web Developer | Software Engineer",
         achievements: [
           <>
@@ -149,8 +149,56 @@ const about: About = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/company-01/image-11.jpg",
+            alt: "FPT Software",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-09.jpg",
+            alt: "Valuable Person FPT 2023",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-08.jpg",
+            alt: "Old Team 1 FPT",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-07.jpg",
+            alt: "Fashion show of FPT project",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-05.jpg",
+            alt: "FPT's Card",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-04.jpg",
+            alt: "Fsoft Run On 2023",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-03.jpg",
+            alt: "Old Team 2 FPT",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-10.jpg",
+            alt: "Old Team 3 FPT",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/company-01/image-06.jpg",
+            alt: "Team building FPT",
             width: 16,
             height: 9,
           },
@@ -180,13 +228,20 @@ const about: About = {
             Recommendation System for the Ministry of Justice(Vietnam).
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/company-01/image-02.jpg",
+            alt: "Team building DTT",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company:
           "Hiep Thanh Telecommunication Service Join Stock Company, Vietnam",
         timeframe: "October 2014 - May 2015",
-        role: "Web Developer | Mobile Developer | Supporter",
+        role: "Web Developer | Mobile Developer",
         achievements: [
           <>
             Developed and enhanced old systems belong to companies using some
@@ -224,32 +279,7 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Java",
-        description: <>Able to develop in Java proficiently.</>,
-        tags: [
-          {
-            name: "Java",
-            icon: "java",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
+        title: "Next.js, Restful API, HTML, CSS, JS",
         description: <>Building next gen apps with Next.js.</>,
         tags: [
           {
@@ -264,8 +294,86 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/projects/project-01/project-05.png",
+            alt: "List meeting room image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Java, SQL, HTML, CSS, JS",
+        description: <>Able to develop in Java proficiently.</>,
+        tags: [
+          {
+            name: "Java",
+            icon: "java",
+          },
+          {
+            name: "MySQL",
+            icon: "sql",
+          },
+          {
+            name: "MySQL",
+            icon: "sql",
+          },
+          {
+            name: "CSS",
+            icon: "css",
+          },
+          {
+            name: "HTML",
+            icon: "html",
+          },
+          {
+            name: "Javascript",
+            icon: "javascript",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/project-01.png",
+            alt: "Graduation Project's Home Page",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/project-02.png",
+            alt: "Graduation Project's Admin Page",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Java, SQL, Java Swing",
+        description: <>A desktop application made by Java.</>,
+        tags: [
+          {
+            name: "Java",
+            icon: "java",
+          },
+          {
+            name: "MySQL",
+            icon: "sql",
+          },
+          {
+            name: "MySQL",
+            icon: "sql",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/project-03.png",
+            alt: "Crosswords 1",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: "/images/projects/project-01/project-04.png",
+            alt: "Crosswords Admin Page",
             width: 16,
             height: 9,
           },
@@ -302,44 +410,59 @@ const gallery: Gallery = {
   // These are placeholder images, replace with your own
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
+      src: "/images/gallery/image-01.jpg",
+      alt: "VNPSC Forum",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
+      src: "/images/gallery/image-02.jpg",
+      alt: "DTT Teambuilding",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
+      src: "/images/gallery/image-03.jpg",
+      alt: "Fsoft Team D",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
+      src: "/images/gallery/image-04.jpg",
+      alt: "Fsoft Running",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
+      src: "/images/gallery/image-05.jpg",
+      alt: "Fsoft's card",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image-06.jpg",
+      alt: "Fsoft Teambuilding 2018",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image-07.jpg",
+      alt: "Fsoft sumup",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
+      src: "/images/gallery/image-08.jpg",
+      alt: "Fsoft Team 1",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
+      src: "/images/gallery/image-09.jpg",
+      alt: "VP Award",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/image-10.jpg",
+      alt: "Fsoft FE Team 2",
+      orientation: "horizontal",
+    },
+    {
+      src: "/images/gallery/image-11.jpg",
+      alt: "FPT",
+      orientation: "horizontal",
     },
   ],
 };
