@@ -15,6 +15,7 @@ import {
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -34,19 +35,20 @@ export default async function RootLayout({
   return (
     <Flex
       suppressHydrationWarning
-      as="html"
-      lang="en"
+      as='html'
+      lang='en'
       fillWidth
       className={classNames(
         fonts.heading.variable,
         fonts.body.variable,
         fonts.label.variable,
-        fonts.code.variable,
+        fonts.code.variable
       )}
     >
       <head>
+        <GoogleTagManager gtmId='GTM-N3RDNBNP'></GoogleTagManager>
         <script
-          id="theme-init"
+          id='theme-init'
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -105,15 +107,16 @@ export default async function RootLayout({
       </head>
       <Providers>
         <Column
-          as="body"
-          background="page"
+          as='body'
+          background='page'
           fillWidth
           style={{ minHeight: "100vh" }}
-          margin="0"
-          padding="0"
-          horizontal="center"
+          margin='0'
+          padding='0'
+          horizontal='center'
         >
-          <RevealFx fill position="absolute">
+          <GoogleTagManager gtmId='GTM-N3RDNBNP'></GoogleTagManager>
+          <RevealFx fill position='absolute'>
             <Background
               mask={{
                 x: effects.mask.x,
@@ -155,10 +158,10 @@ export default async function RootLayout({
               }}
             />
           </RevealFx>
-          <Flex fillWidth minHeight="16" s={{ hide: true }} />
+          <Flex fillWidth minHeight='16' s={{ hide: true }} />
           <Header />
-          <Flex zIndex={0} fillWidth padding="l" horizontal="center" flex={1}>
-            <Flex horizontal="center" fillWidth minHeight="0">
+          <Flex zIndex={0} fillWidth padding='l' horizontal='center' flex={1}>
+            <Flex horizontal='center' fillWidth minHeight='0'>
               <RouteGuard>{children}</RouteGuard>
             </Flex>
           </Flex>
