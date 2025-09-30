@@ -15,7 +15,7 @@ import {
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
-import { GoogleTagManager } from "@next/third-parties/google";
+import GoogleTagManager from "@/components/GoogleTagManager";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -46,7 +46,6 @@ export default async function RootLayout({
       )}
     >
       <head>
-        <GoogleTagManager gtmId='GTM-N3RDNBNP'></GoogleTagManager>
         <script
           id='theme-init'
           dangerouslySetInnerHTML={{
@@ -115,7 +114,10 @@ export default async function RootLayout({
           padding='0'
           horizontal='center'
         >
-          <GoogleTagManager gtmId='GTM-N3RDNBNP'></GoogleTagManager>
+          <GoogleTagManager
+            GTMId='GTM-N3RDNBNP'
+            position='body'
+          ></GoogleTagManager>
           <RevealFx fill position='absolute'>
             <Background
               mask={{
