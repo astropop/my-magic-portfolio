@@ -15,8 +15,8 @@ import {
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
-import GoogleTagManager from "@/components/Google/GoogleTagManager";
-import GoogleAnalytics from "@/components/Google/GoogleAnalytics";
+import GoogleTagManager from "@/components/Google/GTagManager";
+import GoogleAnalytics from "@/components/Google/GAnalytics";
 
 export async function generateMetadata() {
   return Meta.generate({

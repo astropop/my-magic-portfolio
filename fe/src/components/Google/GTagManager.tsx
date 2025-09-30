@@ -5,7 +5,7 @@ type GTMProps = {
   GTMId: string;
 };
 
-const GoogleTagManager: React.FC<GTMProps> = ({
+const GTagManager: React.FC<GTMProps> = ({
   position = "body",
   GTMId = "GTM-N3RDNBNP",
 }) => {
@@ -38,4 +38,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   );
 };
 
-export default GoogleTagManager;
+export default GTagManager;

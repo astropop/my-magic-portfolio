@@ -4,7 +4,7 @@ type GAProps = {
   GAId: string;
 };
 
-const GoogleAnalytics: React.FC<GAProps> = ({ GAId = "G-7Q6J9HYDY4" }) => {
+const GAnalytics: React.FC<GAProps> = ({ GAId = "G-7Q6J9HYDY4" }) => {
   return (
     <>
       <script
@@ -26,4 +26,4 @@ const GoogleAnalytics: React.FC<GAProps> = ({ GAId = "G-7Q6J9HYDY4" }) => {
   );
 };
 
-export default GoogleAnalytics;
+export default GAnalytics;
