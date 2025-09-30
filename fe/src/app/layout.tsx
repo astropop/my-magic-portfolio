@@ -15,7 +15,8 @@ import {
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
-import GoogleTagManager from "@/components/GoogleTagManager";
+import GoogleTagManager from "@/components/google/GoogleTagManager";
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -50,6 +51,7 @@ export default async function RootLayout({
           GTMId='GTM-N3RDNBNP'
           position='head'
         ></GoogleTagManager>
+        <GoogleAnalytics GAId='G-7Q6J9HYDY4'></GoogleAnalytics>
         <script
           id='theme-init'
           dangerouslySetInnerHTML={{
