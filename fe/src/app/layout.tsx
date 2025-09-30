@@ -15,8 +15,8 @@ import {
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
-import GoogleTagManager from "@/components/google/GoogleTagManager";
-import GoogleAnalytics from "@/components/google/GoogleAnalytics";
+import GoogleTagManager from "@/components/Google/GoogleTagManager";
+import GoogleAnalytics from "@/components/Google/GoogleAnalytics";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -109,6 +109,11 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3026647837154644'
+          crossOrigin='anonymous'
+        ></script>
       </head>
       <Providers>
         <Column
