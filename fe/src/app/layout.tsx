@@ -46,6 +46,10 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <GoogleTagManager
+          GTMId='GTM-N3RDNBNP'
+          position='head'
+        ></GoogleTagManager>
         <script
           id='theme-init'
           dangerouslySetInnerHTML={{
