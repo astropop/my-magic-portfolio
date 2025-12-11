@@ -105,7 +105,7 @@ Conclusion: Your domain is now successfully linked to your VPS.
 ### Part 2: Preparing the VPS
 #### Step 1: Install Docker
 What we specifically need to install is Docker Compose.
-You can follow the official tutorial here: https://docs.docker.com/compose/install/linux/
+You can follow the official tutorial here: [https://docs.docker.com/compose/install/linux/](https://docs.docker.com/compose/install/linux/)
 
 #### Step 2: Create a Docker Network
 Run this command: `docker network create -d bridge my-bridge-network `
@@ -130,7 +130,7 @@ Access the VPS, your VPS should be running Linux. Then, follow these steps:
 - Start the ssh-agent: `eval "$(ssh-agent -s)"`
 - Add your private SSH key: `ssh-add ~/.ssh/id_ed25519`
 - Get the public key: Run this command to see your key: `cat ~/.ssh/id_ed25519.pub` <br />
-Copy the key that appears and add it to your GitHub account here: https://github.com/settings/keys
+Copy the key that appears and add it to your GitHub account here: [https://github.com/settings/keys](https://github.com/settings/keys)
 - Create the file: `touch ~/.ssh/authorized_keys`
 - Open the file using Nano and paste the public key inside: `nano ~/.ssh/authorized_keys`
 - Restart the VPS SSH service: `sudo systemctl restart ssh`
@@ -140,9 +140,9 @@ Or, try port 443: `ssh -T git@ssh.github.com -p 443`
 <br />
 Refer tutorial :
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+[https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 #### Step 4: Create a Folder for Your Code
 Run this command to create a directory: `sudo mkdir -p /tmp/your-folder`
@@ -151,7 +151,7 @@ Run this command to create a directory: `sudo mkdir -p /tmp/your-folder`
 
 ### Part 2 : nginx web server
 
-Source code : https://github.com/astropop/my-nginx
+Source code : [https://github.com/astropop/my-nginx](https://github.com/astropop/my-nginx)
 
 Specifically, there are two repos: [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [acme-companion](https://github.com/nginx-proxy/acme-companion)
 
@@ -162,7 +162,7 @@ This is the diagram to understand easier.
 ![3 parts-3](/images/projects/scratch-1-html/3-parts-3.png "3 parts-3")
 
 #### Step 1: Configure GitHub Actions
-Edit the content of the file: deploy-docker-compose.yml  https://github.com/astropop/my-nginx/blob/main/.github/workflows/deploy-docker-compose.yml
+Edit the content of the file: deploy-docker-compose.yml [https://github.com/astropop/my-nginx/blob/main/.github/workflows/deploy-docker-compose.yml](https://github.com/astropop/my-nginx/blob/main/.github/workflows/deploy-docker-compose.yml)
 
 ```
 on:
@@ -184,33 +184,33 @@ Go to your project Settings.<br />
 Go to Secrets and variables -> Actions.<br />
 Click on New repository secret.
 
-The settings are at this URL: https://github.com/astropop/my-nginx/settings/secrets/actions . Change `astropop/my-nginx` to your repository.
+The settings are at this URL: [https://github.com/astropop/my-nginx/settings/secrets/actions](https://github.com/astropop/my-nginx/settings/secrets/actions) . Change `astropop/my-nginx` to your repository.
 
 
 
 When you push code to the `feature/final` branch, the github will automatically run CI/CD and redeploy the project to VPS.
 
 #### Step 2: Edit the Docker Compose File
-Edit the content of the file: docker-compose.yml https://github.com/astropop/my-nginx/blob/main/docker-compose.yml
+Edit the content of the file: docker-compose.yml [https://github.com/astropop/my-nginx/blob/main/docker-compose.yml](https://github.com/astropop/my-nginx/blob/main/docker-compose.yml)
 
 1. Update the Network Name: Change the network name `my_tailt_shared_net` to `my-bridge-network` (the one created earlier). 
 
 2. Check the Ports: Look at Line 6 and Line 7. These are the two ports that will be exposed to the public. People can only access your website via your domain through these ports.
 
 ### Part 3: Source code
-Source code: https://github.com/astropop/my-homepage
+Source code: [https://github.com/astropop/my-homepage](https://github.com/astropop/my-homepage)
 
 We will handle this part just like we did in Part 2 with the nginx-proxy.
 
 This source code contains some basic HTML pages. However, we need another Nginx to host this code on the VPS.
 
 #### Step 1:
-Edit the content of the file: deploy-docker-compose.yml https://github.com/astropop/my-homepage/blob/main/.github/workflows/deploy-docker-compose.yml
+Edit the content of the file: deploy-docker-compose.yml [https://github.com/astropop/my-homepage/blob/main/.github/workflows/deploy-docker-compose.yml](https://github.com/astropop/my-homepage/blob/main/.github/workflows/deploy-docker-compose.yml)
 
 Just like Step 1 in Part 2
 
 #### Step 2:
-Edit the content of the file: docker-compose.yml https://github.com/astropop/my-homepage/blob/main/docker-compose.yml
+Edit the content of the file: docker-compose.yml [https://github.com/astropop/my-homepage/blob/main/docker-compose.yml](https://github.com/astropop/my-homepage/blob/main/docker-compose.yml)
 
 Just like step 2 in Part 2.
 
@@ -232,7 +232,7 @@ Every time you commit and push code to the `feature/final` branch, the code will
 And here is the result:
 ![3 parts-5](/images/projects/scratch-1-html/3-parts-5.png "3 parts-5")
 
-https://vnpsc.com/
+[https://vnpsc.com/](https://vnpsc.com/)
 
 ## What's Next?
 I will create a new guidance that using a MySQL database, some backends such as PHP, Java,...
