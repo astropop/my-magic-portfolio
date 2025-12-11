@@ -58,7 +58,7 @@ So remember out goal!!
 In total, you will need about $31 for the initial cost (using the cheaper VPS option). With this cost, you have full control to develop your own applications in the future.
 
 
-![3 parts]( https://tai.vnpsc.com/images/projects/scratch-1-html/3-parts.png "3 parts")
+![3 parts](/images/projects/scratch-1-html/3-parts.png "3 parts")
 
 ## Steps
 
@@ -85,9 +85,9 @@ Register for an account at dns.he.net.
 #### Step 3:
 Add a new domain (Click "Add a new zone"). After you add a new domain, the screens will look like this:
 
-![dns 1]( https://tai.vnpsc.com/images/projects/scratch-1-html/dns.he.net-1.png "dns 1")
+![dns 1](/images/projects/scratch-1-html/dns.he.net-1.png "dns 1")
 
-![dns 2]( https://tai.vnpsc.com/images/projects/scratch-1-html/dns.he.net-2.png "dns 2")
+![dns 2](/images/projects/scratch-1-html/dns.he.net-2.png "dns 2")
 
 #### Step 4:
 You need to add a Type A record. Point this record to the IP address of the VPS you just bought.
@@ -96,11 +96,11 @@ If you want people to access your website using www.yourdomain.com, you also nee
 
 The result will look like this:
 
-![dns 3]( https://tai.vnpsc.com/images/projects/scratch-1-html/dns.he.net-2.png "dns 3")
+![dns 3](/images/projects/scratch-1-html/dns.he.net-2.png "dns 3")
 
 Conclusion: Your domain is now successfully linked to your VPS.
 
-![3 parts-2]( https://tai.vnpsc.com/images/projects/scratch-1-html/3-parts-2.png "3 parts-2")
+![3 parts-2](/images/projects/scratch-1-html/3-parts-2.png "3 parts-2")
 
 ### Part 2: Preparing the VPS
 #### Step 1: Install Docker
@@ -159,7 +159,7 @@ Using **nginx-proxy** combined with **nginx-proxy/acme-companion** is a great co
 
 This is the diagram to understand easier.
 
-![3 parts-3]( https://tai.vnpsc.com/images/projects/scratch-1-html/3-parts-3.png "3 parts-3")
+![3 parts-3](/images/projects/scratch-1-html/3-parts-3.png "3 parts-3")
 
 #### Step 1: Configure GitHub Actions
 Edit the content of the file: deploy-docker-compose.yml  https://github.com/astropop/my-nginx/blob/main/.github/workflows/deploy-docker-compose.yml
@@ -224,13 +224,13 @@ More modifications:
 - Network Name: Change `my_tailt_shared_net` to your `my-bridge-network`.
 
 The system for these projects will follow this model:
-![3 parts-4]( https://tai.vnpsc.com/images/projects/scratch-1-html/3-parts-4.png "3 parts-4")
+![3 parts-4](/images/projects/scratch-1-html/3-parts-4.png "3 parts-4")
 
 ### Final Part: 
 Every time you commit and push code to the `feature/final` branch, the code will be automatically run the workflow then rebuilt and deployed to your VPS.
 
 And here is the result:
-![3 parts-5]( https://tai.vnpsc.com/images/projects/scratch-1-html/3-parts-5.png "3 parts-5")
+![3 parts-5](/images/projects/scratch-1-html/3-parts-5.png "3 parts-5")
 
 https://vnpsc.com/
 
@@ -243,7 +243,7 @@ Hope this article can help anyone who is insterested in building a website from 
 ## Technologies Used
 
 - **HTML, CSS**.
-- ** Github Workflow **: Automatically test, build, deploy to VPS.
+- **Github Workflow**: Automatically test, build, deploy to VPS.
 - **Docker**: For acceleration, better CI/CD support, easier to change and move.
 - **Nginx**: Acts as a webserver, helping reverse proxy to navigate apps on the server.
 - **VPS (Virtual Private Server)**: Acts as a storage, storing everything and keeping evertything always online.
