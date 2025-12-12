@@ -74,9 +74,7 @@ const home: Home = {
   },
   subline: (
     <>
-      Hi, I’m Tai Tuan Le <br />
-      A Software Engineer and a Web Developer. <br />
-      <br />
+      Hi, I’m Tai Tuan Le. I'm a Software Engineer and a Web Developer. <br />
       Specializing in building websites, applications and passionate about
       sharing my knowledge about programming, technology.
     </>
