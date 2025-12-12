@@ -11,17 +11,16 @@ team:
     linkedIn: "https://www.linkedin.com/in/tailt0/"
 ---
 ## Introduction
-First, let me introduce myself. I am Tai Tuan Le, a Software Engineer/a Web Developer from Vietnam. As I write this post, I am studying in Adelaide, Australia.
-I specialize in web development. My main programming languages are React.js and Spring Boot Java. And of course, I cannot forget SQL! :D I know these skills well because I can work as a Full Stack Developer.
-However, in today's post, I will talk about building a website from scratch. I will look at exactly what you need to do to go from having some html files to having a live website that people can access.
+First, let me introduce myself. I am Tai Tuan Le, a Software Engineer/a Web Developer from Vietnam. As I write this post, I am studying in Adelaide, Australia. I specialize in web development. 
+So, in today's post, I will talk about building a website from scratch. I will look at what you need to do to go from having some html files to having a live website that people can access.
 
 ## Overview
 
-Some days ago, a friend asked me: "Brother, I am researching how to build a website, but I don't know where to start. I already have the code, but I don't know what to buy. Is it expensive? What do I do next? Please help me."
+Some days ago, a friend asked me: "I am researching how to build a website, but I don't know where to start. I already have the code, but I don't know what to buy. Is it expensive? What do I do next? Please help me."
 Since I have done this successfully before, I decided to write this guide. If you are reading this, please like and refresh the page to give me some traffic :D
 **Our Goal** is to build a website from some html files with the lowest cost possible and the easiest way.
 **Who is this for?**
-I wrote this post for people who know how to program and have basic knowledge of websites, servers, domains, etc.
+I wrote this post for people who know how to program and have basic knowledge of websites, servers, domains, etc. This tutorial will skip some steps in detail.
 
 Let's start!!!!
 ## What You Need (Ingredients)
@@ -36,25 +35,27 @@ You might think about getting a free domain, but I won't discuss that here. I re
 
 **2. VPS (Virtual Private Server)** About $15/year.
 For $15/year, you can get a VPS with 2TB bandwidth and 20GB storage if you buy from GreenCloudVPS.
-However, I needed more storage, so I chose a provider called HyperCore VN. It offers a discount that unlimited bandwidth and 40GB storage for about $35/year.
+However, I needed more storage for further projects in the future, so I chose a provider called HyperCore VN. It offers a discount that unlimited bandwidth and 40GB storage for about $35/year.
 Some of you might ask: "Why not use AWS or Azure? They have 'pay as you go' options and can be very cheap."
 Well, first, signing up requires some initial cost, and they are quite complex to use. People even study for special certificates just to use AWS and Azure!
-Also, remember the global crash of [AWS on October 20, 2025](https://health.aws.amazon.com/health/status?eventID=arn:aws:health:us-east-1::event/MULTIPLE_SERVICES/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE/AWS_MULTIPLE_SERVICES_OPERATIONAL_ISSUE_BA540_514A652BE1A) , and Azure in July 2024 and October 29, 2025? These events shook the world. In my opinion, if you rely too much on one big provider, they decide if your system is strong or weak, not you.
+Also, these providers should be use for business project, big project. In my opinion, if you rely too much on one big provider, they decide if your system is strong or weak, not you. And after a long time, you can forgot how to build a website when these providers are not available.
 
-So remember out goal at the beginning!!
+So remember out goal at the beginning : FREE and EASY!!!
 
-In total, you will need about $31 for the initial cost. With this cost, you have full control to develop your own applications in the future.
+In total, you will need **about $31 for the initial cost**. With this cost, you have full control to develop your own applications in 1 year.
 
+<br />
+There are three ingredients we got:
 ![3 parts](/images/projects/scratch-1-html/3-parts.png "3 parts")
 
 ## Steps
 ### Part 1: DNS
 By default, when you register a domain from any provider, they give you their own DNS service. This DNS acts as a bridge between your domain and your VPS.
-However, logging into your domain provider's website too often can be risky. You might accidentally reveal your password, or your domain could be hacked and transferred to another place without your permission. Therefore, I recommend using a third-party DNS.
-Many people suggest using CloudFlare, which is one of the biggest DNS providers right now. However, remember the outages on [November 18, 2025](https://blog.cloudflare.com/18-november-2025-outage/) and [December 5, 2025](https://blog.cloudflare.com/5-december-2025-outage/)? They affected ChatGPT, Canva, X, League of Legends, .... This confirms my opinion: we should not rely 100% on huge providers.
-Instead, choose a mid-sized provider. They are strong enough but give you more control. Personally, I choose [dns.he.net](https://dns.he.net/).
+However, logging into your domain provider's website too often can be risky. You might accidentally reveal your password, or your account could be hacked or your dommain could be transferred to another place without your permission. Therefore, I recommend using a third-party DNS.
+Many people suggest using CloudFlare, which is one of the biggest DNS providers right now. However, in 2025, 2 outages have appeared on [November 18, 2025](https://blog.cloudflare.com/18-november-2025-outage/) and [December 5, 2025](https://blog.cloudflare.com/5-december-2025-outage/)? I've lost faith in CloudFlare.
+Instead, choose an other provider. They are strong enough, simple but give me more control. Personally, I have chosen [dns.he.net](https://dns.he.net/) since 2010.
 
-#### Step 1: 
+#### Step 1: Add nameserver
 Go to the domain management page on your provider's website (where you bought the domain). Change these 5 addresses from he.net:
 - ns1.he.net
 - ns2.he.net
@@ -62,17 +63,16 @@ Go to the domain management page on your provider's website (where you bought th
 - ns4.he.net
 - ns5.he.net
 
-#### Step 2:
+#### Step 2: Register account dns.he.net
 Register for an account at [https://dns.he.net](https://dns.he.net/).
 
-#### Step 3:
+#### Step 3: Add records in dns.he.net
 Add a new domain (Click "Add a new zone"). After you add a new domain, the screens will look like this:
 ![dns 1](/images/projects/scratch-1-html/dns.he.net-1.png "dns 1")
 ![dns 2](/images/projects/scratch-1-html/dns.he.net-2.png "dns 2")
 
-#### Step 4:
 You need to add a Type A record. Point this record to the IP address of the VPS you just bought.
-If you want people to access your website using www.yourdomain.com, you also need to add a CNAME record. This is optional, so you do not have to do it if you don't want to.
+If you want people to access your website using `www.` , you also need to add a CNAME record. This is optional, so you do not have to do it if you don't want to.
 The result will look like this:
 ![dns 3](/images/projects/scratch-1-html/dns.he.net-3.png "dns 3")
 
@@ -120,7 +120,7 @@ Run this command to create a directory: `sudo mkdir -p /tmp/your-folder`
 
 ** P.S.: ** Please remember this folder path (`/tmp/your-folder`).
 
-### Part 2 : nginx web server
+### Part 2 : Nginx web server
 Source code : [https://github.com/astropop/my-nginx](https://github.com/astropop/my-nginx)
 
 Specifically, there are two repos: [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [acme-companion](https://github.com/nginx-proxy/acme-companion)
@@ -169,13 +169,13 @@ Source code: [https://github.com/astropop/my-homepage](https://github.com/astrop
 We will handle this part just like we did in Part 2 with the nginx-proxy.
 This source code contains some basic HTML pages. However, we need another Nginx to host this code on the VPS.
 
-#### Step 1:
+#### Step 1: Configure GitHub Actions of your project
 Edit the content of the file: deploy-docker-compose.yml [https://github.com/astropop/my-homepage/blob/main/.github/workflows/deploy-docker-compose.yml](https://github.com/astropop/my-homepage/blob/main/.github/workflows/deploy-docker-compose.yml)
-Just like Step 1 in Part 2
+Just like Step 1 in Part 2 - [Link](/work/make-a-website-from-scratch-html-files#step-1-configure-github-actions)
 
-#### Step 2:
+#### Step 2: Edit the Docker Compose File of your project
 Edit the content of the file: docker-compose.yml [https://github.com/astropop/my-homepage/blob/main/docker-compose.yml](https://github.com/astropop/my-homepage/blob/main/docker-compose.yml)
-Just like step 2 in Part 2.
+Just like step 2 in Part 2 - [Link](/work/make-a-website-from-scratch-html-files#step-2-edit-the-docker-compose-file)
 More modifications:
 - Line 3 (Image): `nginx:alpine` This is the web server used to host the source code. This image is very light, taking up only about 80MB.
 - VIRTUAL_HOST: Enter your domain here (e.g., newdomain.com).
@@ -183,10 +183,11 @@ More modifications:
 - LETSENCRYPT_HOST: This must match the domain you entered in VIRTUAL_HOST.
 - LETSENCRYPT_EMAIL: Change this to your email address.
 - Network Name: Change `my_tailt_shared_net` to your `my-bridge-network`.
+<br />
 The system for these projects will follow this model:
 ![3 parts-4](/images/projects/scratch-1-html/3-parts-4.png "3 parts-4")
 
-### Final Part: 
+### Final Part: Publish your website
 Every time you commit and push code to the `feature/final` branch, the code will be automatically run the workflow then rebuilt and deployed to your VPS.
 And here is the result:
 ![3 parts-5](/images/projects/scratch-1-html/3-parts-5.png "3 parts-5")
