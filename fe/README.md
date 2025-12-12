@@ -2,7 +2,7 @@
 
 View the demo [here](https://tai.vnpsc.com).
 
-![Magic Portfolio](public/images/og/home.jpg)
+![Magic Portfolio](fe/public/images/gallery/project-06.png)
 
 ## Getting started
 
