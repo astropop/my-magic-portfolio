@@ -54,7 +54,6 @@ export type StyleConfig = {
   solidStyle: SolidStyle;
   border: BorderStyle;
   surface: SurfaceStyle;
-  // transition: TransitionStyle;
   scaling: ScalingSize;
 };
 

@@ -7,7 +7,7 @@ import classNames from "classnames";
 import { Footer, Header, Providers, RouteGuard } from "@/components";
 import GoogleAnalytics from "@/components/Google/GAnalytics";
 import GoogleTagManager from "@/components/Google/GTagManager";
-import { baseURL, effects, fonts, home, style } from "@/resources";
+import { baseURL, dataStyle, effects, fonts, home, style } from "@/resources";
 import {
   Background,
   Column,
@@ -59,7 +59,7 @@ export default async function RootLayout({
               (function() {
                 try {
                   const root = document.documentElement;
-                  const defaultTheme = 'system';
+                  const defaultTheme = 'light';
                   
                   // Set defaults from config
                   const config = ${JSON.stringify({
@@ -70,9 +70,9 @@ export default async function RootLayout({
                     "solid-style": style.solidStyle,
                     border: style.border,
                     surface: style.surface,
-                    // transition: style.transition,
+                    transition: "none",
                     scaling: style.scaling,
-                    //"viz-style": dataStyle.variant,
+                    "viz-style": dataStyle.variant,
                   })};
                   
                   // Apply default values
@@ -83,7 +83,7 @@ export default async function RootLayout({
                   // Resolve theme
                   const resolveTheme = (themeValue) => {
                     if (!themeValue || themeValue === 'system') {
-                      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'light';
                     }
                     return themeValue;
                   };
@@ -103,7 +103,7 @@ export default async function RootLayout({
                   });
                 } catch (e) {
                   console.error('Failed to initialize theme:', e);
-                  document.documentElement.setAttribute('data-theme', 'dark');
+                  document.documentElement.setAttribute('data-theme', 'light');
                 }
               })();
             `,
@@ -175,8 +175,7 @@ export default async function RootLayout({
           <Header />
           <Flex zIndex={0} fillWidth padding='l' horizontal='center' flex={1}>
             <Flex horizontal='center' fillWidth minHeight='0'>
-              {/* <RouteGuard>{children}</RouteGuard> */}
-              {children}
+              <RouteGuard>{children}</RouteGuard>
             </Flex>
           </Flex>
           <Footer />
