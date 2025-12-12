@@ -74,12 +74,11 @@ const home: Home = {
   },
   subline: (
     <>
-      I’m Tai Tuan Le, a software engineer with 9+ years of experience <br />
-      in Java, React.JS, Next.JS, web apps and full-stack development.
+      Hi, I’m Tai Tuan Le <br />
+      A Software Engineer and a Web Developer. <br />
       <br />
-      Passionate about turning code into colorful life, <br />I enjoy creating
-      projects that bring ideas to life. <br />
-      Welcome to my portfolio.
+      Specializing in building websites, applications and passionate about
+      sharing my knowledge about programming, technology.
     </>
   ),
 };
@@ -105,11 +104,12 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Tai is a software engineer with a passion for transforming complex
-        challenges into simple, elegant design solutions. With 9+ years of
-        software engineering experience, specialising in Java, web applications,
-        and full-stack development, I have an interest in turning code into
-        colorful life.
+        My name is Tai, I am a software engineer with a passion for transforming
+        complex challenges into simple, elegant design solutions. With 9+ years
+        of software engineering experience, specialising in Java, web
+        applications, and full-stack development, I have an interest in turning
+        code into colorful life and also share my experiences about programming,
+        techonology to everybody.
       </>
     ),
   },
