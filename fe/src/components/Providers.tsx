@@ -31,7 +31,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         solidStyle={style.solidStyle as SolidStyle}
         border={style.border as BorderStyle}
         surface={style.surface as SurfaceStyle}
-        transition={style.transition as TransitionStyle}
+        // transition={style.transition as TransitionStyle}
         scaling={style.scaling as ScalingSize}
       >
         <DataThemeProvider
