@@ -38,7 +38,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "vhttps://www.linkedin.com/in/tailt0",
+    link: "https://www.linkedin.com/in/tailt0",
   },
   // {
   //   name: "Threads",
