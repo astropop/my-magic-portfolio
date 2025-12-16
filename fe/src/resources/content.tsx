@@ -14,7 +14,7 @@ const person: Person = {
   firstName: "Tai Tuan",
   lastName: "Le",
   name: `Tai Tuan Le`,
-  role: "Software Engineer | Developer Programmer | Web Developer | Java Developer",
+  role: "Software Engineer | Web Developer | Java Developer",
   avatar: "/images/avatar.png",
   email: "letuantai241@gmail.com",
   location: "Australia/Adelaide", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -31,25 +31,25 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/tailt0",
+  },
+  {
     name: "GitHub",
     icon: "github",
     link: "https://github.com/astropop/",
   },
   {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/in/tailt0",
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
   },
   // {
   //   name: "Threads",
   //   icon: "threads",
   //   link: "https://www.threads.com/@once_ui",
   // },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
 ];
 
 const home: Home = {
@@ -87,7 +87,7 @@ const about: About = {
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
-    display: true,
+    display: false,
     subItems: false,
   },
   avatar: {
@@ -104,12 +104,98 @@ const about: About = {
       <>
         My name is Tai, I am a software engineer with a passion for transforming
         complex challenges into simple, elegant design solutions. With 9+ years
-        of software engineering experience, specialising in Java, web
+        of software engineering experience, specialising in Java, React.js, web
         applications, and full-stack development, I have an interest in turning
         code into colorful life and also share my experiences about programming,
         techonology to everybody.
       </>
     ),
+  },
+  studies: {
+    display: true, // set to false to hide this section
+    title: "Studies",
+    institutions: [
+      {
+        name: "Flinders University",
+        description: <>Master of Information Technology</>,
+        timeframe: "March 2025 – Current",
+      },
+      {
+        name: "Military Technical Academy, Vietnam",
+        description: <>Bachelor of Information Technology</>,
+        timeframe: "2011 – 2017",
+      },
+      {
+        name: "Hanoi APTECH, Vietnam",
+        description: <>APTECH CERTIFIED COMPUTER PROFESSIONAL (ACCP)</>,
+        timeframe: "2011 - 2014",
+      },
+    ],
+  },
+  technical: {
+    display: true, // set to false to hide this section
+    title: "Technical skills",
+    skills: [
+      {
+        title: "React.js, Next.js",
+        description: <>Front-End skills</>,
+        tags: [
+          {
+            name: "JavaScript",
+            icon: "javascript",
+          },
+          {
+            name: "Next.js",
+            icon: "nextjs",
+          },
+          {
+            name: "CSS",
+            icon: "css",
+          },
+          {
+            name: "HTML",
+            icon: "html",
+          },
+          {
+            name: "Javascript",
+            icon: "javascript",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Java, SQL, PostgreSQL, Oracle",
+        description: <>Back-End and Database Management Skills</>,
+        tags: [
+          {
+            name: "Java",
+            icon: "java",
+          },
+          {
+            name: "MySQL",
+            icon: "sql",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Next.js, Springboot, Liferay",
+        description: <>Frameworks & Platforms</>,
+        tags: [],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title:
+          "Docker, Figma, PerfectPixel, Github, SVN, Jira, Confluence, Redmine, RestfulAPI, Jasper Reports,...",
+        description: <>Programming Tools, Other tools and technologies</>,
+        tags: [],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+    ],
   },
   work: {
     display: true, // set to false to hide this section
@@ -250,89 +336,6 @@ const about: About = {
             numbers by preference, calculating feng shui points.
           </>,
         ],
-        images: [],
-      },
-    ],
-  },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
-      {
-        name: "Flinders University",
-        description: <>Master of Information Technology</>,
-      },
-      {
-        name: "Military Technical Academy, Vietnam",
-        description: <>Bachelor of Information Technology</>,
-      },
-      {
-        name: "Hanoi APTECH, Vietnam",
-        description: <>APTECH CERTIFIED COMPUTER PROFESSIONAL (ACCP)</>,
-      },
-    ],
-  },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "React.js, Next.js, HTML, CSS, Javascript",
-        description: <>Front-End skills</>,
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "CSS",
-            icon: "css",
-          },
-          {
-            name: "HTML",
-            icon: "html",
-          },
-          {
-            name: "Javascript",
-            icon: "javascript",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [],
-      },
-      {
-        title: "Java, SQL, PostgreSQL, Oracle",
-        description: <>Back-End and Database Management Skills</>,
-        tags: [
-          {
-            name: "Java",
-            icon: "java",
-          },
-          {
-            name: "MySQL",
-            icon: "sql",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [],
-      },
-      {
-        title: "Next.js, Springboot, Liferay",
-        description: <>Frameworks & Platforms</>,
-        tags: [],
-        // optional: leave the array empty if you don't want to display images
-        images: [],
-      },
-      {
-        title:
-          "Docker, RestfulAPI, Figma, PerfectPixel, Github, SVN, Jasper Reports, Jira, Confluence, Remine,...",
-        description: <>Programming Tools, Other tools and technologies</>,
-        tags: [],
-        // optional: leave the array empty if you don't want to display images
         images: [],
       },
     ],

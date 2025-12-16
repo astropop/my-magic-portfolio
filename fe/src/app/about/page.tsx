@@ -35,11 +35,6 @@ export default function About() {
       items: [],
     },
     {
-      title: about.work.title,
-      display: about.work.display,
-      items: about.work.experiences.map((experience) => experience.company),
-    },
-    {
       title: about.studies.title,
       display: about.studies.display,
       items: about.studies.institutions.map((institution) => institution.name),
@@ -48,6 +43,11 @@ export default function About() {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
+    },
+    {
+      title: about.work.title,
+      display: about.work.display,
+      items: about.work.experiences.map((experience) => experience.company),
     },
   ];
   return (
@@ -115,7 +115,7 @@ export default function About() {
             fillWidth
             minHeight='160'
             vertical='center'
-            marginBottom='32'
+            marginBottom='4'
           >
             {about.calendar.display && (
               <Row
@@ -146,12 +146,12 @@ export default function About() {
                 />
               </Row>
             )}
-            <Heading className={styles.textAlign} variant='display-strong-xl'>
+            <Heading className={styles.textAlign} variant='display-strong-s'>
               {person.name}
             </Heading>
             <Text
               className={styles.textAlign}
-              variant='display-default-xs'
+              variant='heading-default-xs'
               onBackground='neutral-weak'
             >
               {person.role}
@@ -160,7 +160,7 @@ export default function About() {
               <Row
                 className={styles.blockAlign}
                 paddingTop='20'
-                paddingBottom='8'
+                paddingBottom='4'
                 gap='8'
                 wrap
                 horizontal='center'
@@ -203,10 +203,56 @@ export default function About() {
               textVariant='body-default-l'
               fillWidth
               gap='m'
-              marginBottom='xl'
+              marginBottom='m'
+              align='justify'
             >
               {about.intro.description}
             </Column>
+          )}
+
+          {about.studies.display && (
+            <>
+              <Heading
+                as='h2'
+                id={about.studies.title}
+                variant='heading-strong-m'
+                marginBottom='8'
+              >
+                {about.studies.title}
+              </Heading>
+              <Column fillWidth gap='12' marginBottom='l'>
+                {about.studies.institutions.map((institution, index) => (
+                  <Column
+                    key={`${institution.name}-${index}`}
+                    fillWidth
+                    gap='4'
+                  >
+                    <Row
+                      fillWidth
+                      horizontal='between'
+                      vertical='end'
+                      marginBottom='4'
+                    >
+                      <Text id={institution.name} variant='heading-strong-xs'>
+                        {institution.name}
+                      </Text>
+                      <Text
+                        variant='heading-default-xs'
+                        onBackground='neutral-weak'
+                      >
+                        {institution.timeframe}
+                      </Text>
+                    </Row>
+                    <Text
+                      variant='heading-default-xs'
+                      onBackground='neutral-weak'
+                    >
+                      {institution.description}
+                    </Text>
+                  </Column>
+                ))}
+              </Column>
+            </>
           )}
 
           {about.technical.display && (
@@ -214,20 +260,20 @@ export default function About() {
               <Heading
                 as='h2'
                 id={about.technical.title}
-                variant='display-strong-s'
-                marginBottom='40'
+                variant='heading-strong-m'
+                marginBottom='8'
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap='l'>
+              <Column fillWidth gap='12' marginBottom='l'>
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap='4'>
-                    <Text id={skill.title} variant='heading-strong-l'>
+                  <Column key={`${skill}-${index}`} fillWidth>
+                    <Text id={skill.title} variant='heading-strong-xs'>
                       {skill.title}
                     </Text>
                     {skill.description && (
                       <Text
-                        variant='body-default-m'
+                        variant='body-default-s'
                         onBackground='neutral-weak'
                       >
                         {skill.description}
@@ -278,12 +324,12 @@ export default function About() {
               <Heading
                 as='h2'
                 id={about.work.title}
-                variant='display-strong-s'
-                marginBottom='m'
+                variant='heading-strong-m'
+                marginBottom='12'
               >
                 {about.work.title}
               </Heading>
-              <Column fillWidth gap='l' marginBottom='40'>
+              <Column fillWidth gap='m' marginBottom='24'>
                 {about.work.experiences.map((experience, index) => (
                   <Column
                     key={`${experience.company}-${experience.role}-${index}`}
@@ -295,7 +341,7 @@ export default function About() {
                       vertical='end'
                       marginBottom='4'
                     >
-                      <Text id={experience.company} variant='heading-strong-l'>
+                      <Text id={experience.company} variant='heading-strong-xs'>
                         {experience.company}
                       </Text>
                       <Text
@@ -352,38 +398,6 @@ export default function About() {
                         ))}
                       </Row>
                     )}
-                  </Column>
-                ))}
-              </Column>
-            </>
-          )}
-
-          {about.studies.display && (
-            <>
-              <Heading
-                as='h2'
-                id={about.studies.title}
-                variant='display-strong-s'
-                marginBottom='m'
-              >
-                {about.studies.title}
-              </Heading>
-              <Column fillWidth gap='l' marginBottom='40'>
-                {about.studies.institutions.map((institution, index) => (
-                  <Column
-                    key={`${institution.name}-${index}`}
-                    fillWidth
-                    gap='4'
-                  >
-                    <Text id={institution.name} variant='heading-strong-l'>
-                      {institution.name}
-                    </Text>
-                    <Text
-                      variant='heading-default-xs'
-                      onBackground='neutral-weak'
-                    >
-                      {institution.description}
-                    </Text>
                   </Column>
                 ))}
               </Column>
