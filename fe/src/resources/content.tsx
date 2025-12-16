@@ -277,8 +277,8 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Next.js, Restful API, HTML, CSS, JS",
-        description: <>Building next gen apps with Next.js.</>,
+        title: "React.js, Next.js, HTML, CSS, Javascript",
+        description: <>Front-End skills</>,
         tags: [
           {
             name: "JavaScript",
@@ -287,33 +287,6 @@ const about: About = {
           {
             name: "Next.js",
             icon: "nextjs",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/project-05.png",
-            alt: "List meeting room image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Java, SQL, HTML, CSS, JS",
-        description: <>Able to develop in Java proficiently.</>,
-        tags: [
-          {
-            name: "Java",
-            icon: "java",
-          },
-          {
-            name: "MySQL",
-            icon: "sql",
-          },
-          {
-            name: "MySQL",
-            icon: "sql",
           },
           {
             name: "CSS",
@@ -329,24 +302,11 @@ const about: About = {
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/project-01.png",
-            alt: "Graduation Project's Home Page",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/project-02.png",
-            alt: "Graduation Project's Admin Page",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Java, SQL, Java Swing",
-        description: <>A desktop application made by Java.</>,
+        title: "Java, SQL, PostgreSQL, Oracle",
+        description: <>Back-End and Database Management Skills</>,
         tags: [
           {
             name: "Java",
@@ -356,26 +316,24 @@ const about: About = {
             name: "MySQL",
             icon: "sql",
           },
-          {
-            name: "MySQL",
-            icon: "sql",
-          },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/project-03.png",
-            alt: "Crosswords 1",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/project-04.png",
-            alt: "Crosswords Admin Page",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
+      },
+      {
+        title: "Next.js, Springboot, Liferay",
+        description: <>Frameworks & Platforms</>,
+        tags: [],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title:
+          "Docker, RestfulAPI, Figma, PerfectPixel, Github, SVN, Jasper Reports, Jira, Confluence, Remine,...",
+        description: <>Programming Tools, Other tools and technologies</>,
+        tags: [],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
       },
     ],
   },
