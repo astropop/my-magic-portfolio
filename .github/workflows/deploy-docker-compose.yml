@@ -18,7 +18,7 @@ jobs:
         uses: docker/setup-qemu-action@v3
 
       - name: SSH and deploy
-        uses: appleboy/ssh-action@v1.2.2
+        uses: appleboy/ssh-action@v1.2.4
         with:
           host: ${{ secrets.ONLINE_HOST }} # ip of server
           username: ${{ secrets.ONLINE_USERNAME }} # Username to login to server
