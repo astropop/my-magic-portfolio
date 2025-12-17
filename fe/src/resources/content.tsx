@@ -207,22 +207,22 @@ const about: About = {
         role: "Front-end Team Leader | Web Developer | Software Engineer",
         achievements: [
           <>
-            Developed 5 screens for each system, including one screen rated as
-            the project’s most challenging.
-          </>,
-          <>
-            Mentored two 5-member teams, with 5 members becoming future leaders
-            and others key members of other teams.
-          </>,
-          <>
-            Built a process with over 10,000 lines of code to import large
-            datasets into a database using Seasar2 Framework based on Java
-            Struts 2.
+            Made a batch with over 10,000 lines of code to import large datasets
+            into a database using Seasar2 Framework based on Java Struts 2.
           </>,
           <>
             Delivered successfully a custom SSO login system for client
             registration and login for Japanese customer systems.
           </>,
+          <>
+            Developed many screens for customer, including one screen rated as
+            the project’s most challenging.
+          </>,
+          <>
+            Mentored a lot of members, with 5 members becoming future leaders
+            and others key members of other teams.
+          </>,
+
           <>Got a Valuable Person Award in 2023.</>,
           <>Promoted to sub-leader in 2021, leader in 2022.</>,
           <>
