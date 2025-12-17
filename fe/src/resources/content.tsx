@@ -104,10 +104,10 @@ const about: About = {
       <>
         My name is Tai, I am a software engineer with a passion for transforming
         complex challenges into simple, elegant design solutions. With 9+ years
-        of software engineering experience, specialising in Java, React.js, web
-        applications, and full-stack development, I have an interest in turning
-        code into colorful life and also share my experiences about programming,
-        techonology to everybody.
+        of software engineering experience, specialising in web applications,
+        and full-stack development. I have an interest in turning code into
+        colorful life and also share my experiences about programming,
+        technology to everybody.
       </>
     ),
   },
