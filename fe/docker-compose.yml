@@ -10,8 +10,6 @@ services:
       - VIRTUAL_PATH=/
       - LETSENCRYPT_HOST=tai.vnpsc.com,www.tai.vnpsc.com,astropop.top,www.astropop.top
       - LETSENCRYPT_EMAIL=spinatp@gmail.com
-    # ports:
-    #   - "3001:3001"   # optional
     networks:
       shared:
         aliases:
