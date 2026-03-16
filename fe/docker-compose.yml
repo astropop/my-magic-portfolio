@@ -9,8 +9,7 @@ services:
       - VIRTUAL_HOST=tai.vnpsc.com,www.tai.vnpsc.com,astropop.top,www.astropop.top
       - VIRTUAL_PATH=/
       - LETSENCRYPT_HOST=tai.vnpsc.com,www.tai.vnpsc.com,astropop.top,www.astropop.top
-      - CERT_NAME=tai.vnpsc.com,www.tai.vnpsc.com,astropop.top,www.astropop.top
-      - LETSENCRYPT_EMAIL=spinatp@gmail.com
+      - LETSENCRYPT_SINGLE_DOMAIN_CERTS=true
     networks:
       shared:
         aliases:
